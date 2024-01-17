@@ -1,0 +1,219 @@
+@font-face {
+    font-family: TitilliumWeb-Regular;
+    src: url(../Fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: TitilliumWeb-Bold;
+    src: url(../Fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+}
+
+.backgroundImgLanding{
+    background-image: url(../assets/4f2831ca-1d01-47a8-9968-88d2cfc89db4.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #EAD8B2;
+    max-width: 100%;
+    height: auto;
+}
+
+.backgroundImgDifficulty{
+    background-image: url(../assets/4fce5c39-0b17-41df-b2e7-6e2c7c786ac4.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #EAD8B2;
+    max-width: 100%;
+    height: auto;
+}
+
+.backgroundImgEnd{
+    background-image: url(../assets/afb106cc-6f6b-45a0-9d69-9f785d7e988e.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #EAD8B2;
+    max-width: 100%;
+    height: auto;;
+}
+
+.backgroundImgGame{
+    background-color: #FDDF9F;
+}
+
+.landingHeadTitleBox{
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    margin: 8.229% 7.8125% 0px 7.8125%;
+}
+
+.landingTextFont{
+    font-family: TitilliumWeb-Bold;
+    font-size: 100px;
+    text-align: center;
+    padding: 11px 64px 11px 64px;
+    margin: 0px;
+}
+
+.landingPlayWithFriendBox{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 4.635% 40% 0% 39.796%;
+}
+
+.landFriendText{
+    font-family: TitilliumWeb-Bold;
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 17px 20px 17px;
+    margin: 0px;
+}
+
+.landingAiBox{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 1.354% 40% 0% 39.796%;
+}
+
+.landAIText{
+    font-family: TitilliumWeb-Bold;
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 64px 20px 64px;
+    margin: 0px;
+}
+
+.difficultyBackBox{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: start;
+    margin-left: 65px;
+    margin-top: 65px;
+    margin-right: 822px;
+}
+
+.difficultyBackText{
+    font-family: TitilliumWeb-Bold;
+    font-size: 50px;
+    padding: 10px 53px;
+    margin: 0px;
+}
+
+.rulesBtn{
+    font-family: TitilliumWeb-Bold;
+    font-size: 50px;
+    background-color: white; 
+    color: black;
+    border: none;
+    border-radius: 15px;
+    margin-right: 65px;
+    margin-top: 65px;
+    padding: 10px 44px 10px 45px;
+}
+
+.difficultyTitleText{
+    font-family: TitilliumWeb-Bold;
+    font-size: 100px;
+    text-align: center;
+    padding: 11px 73px;
+    margin: 0px;
+}
+
+.difficultyTitleBox{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: start;
+    margin-top: 19px;
+    margin-left: 393px;
+    margin-right: 393px;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.difficultyMarginTop{
+    margin-top: 170px;
+}
+
+.endTitleBox{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: start;
+    margin-top: 105px;
+    margin-left: 637px;
+    margin-right: 637px;
+}
+.endTitleText{
+    font-family: TitilliumWeb-Bold;
+    font-size: 100px;
+    text-align: center;
+    padding: 11px 73px;
+    margin: 0px;
+}
+
+.endUserBox{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: start;
+    margin-top: 92px;
+    margin-left: 781px;
+    margin-right: 781px;
+}
+
+.endUserText{
+    font-family: TitilliumWeb-Bold;
+    font-size: 50px;
+    text-align: center;
+    padding: 0px 29px;
+    margin: 0px;
+}
+
+.endMainBtn{
+    border: none; 
+    background-color: white; 
+    border-radius: 15px;
+    padding: 20px 53px 20px 52px;
+    margin-top: 102px;
+}
+
+.gameUserBox{
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 65px;
+    margin-left: 65px;
+    margin-right: 255.89px;
+}
+
+.gameUserBox2{
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 65px;
+    margin-right: 65px;
+    margin-left: 255.89px;
+}
+
+.gameText{
+    font-size: 50px;
+    font-family: TitilliumWeb-Bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
