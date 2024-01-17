@@ -8,7 +8,7 @@
     src: url(../Fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
 }
 
-.backgroundImgLanding{
+.backgroundImgLanding {
     background-image: url(../assets/4f2831ca-1d01-47a8-9968-88d2cfc89db4.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -19,7 +19,7 @@
     height: auto;
 }
 
-.backgroundImgDifficulty{
+.backgroundImgDifficulty {
     background-image: url(../assets/4fce5c39-0b17-41df-b2e7-6e2c7c786ac4.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -30,7 +30,7 @@
     height: auto;
 }
 
-.backgroundImgEnd{
+.backgroundImgEnd {
     background-image: url(../assets/afb106cc-6f6b-45a0-9d69-9f785d7e988e.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -38,22 +38,23 @@
     background-size: cover;
     background-color: #EAD8B2;
     max-width: 100%;
-    height: auto;;
+    height: auto;
+    ;
 }
 
-.backgroundImgGame{
+.backgroundImgGame {
     background-color: #FDDF9F;
 }
 
-.landingHeadTitleBox{
-    background-color: white;
-    border-radius: 25px;
+.landingHeadTitleBox {
+    /* background-color: white;
+    border-radius: 25px; */
     display: flex;
     justify-content: center;
     margin: 8.229% 7.8125% 0px 7.8125%;
 }
 
-.landingTextFont{
+.landingTextFont {
     font-family: TitilliumWeb-Bold;
     font-size: 100px;
     text-align: center;
@@ -61,7 +62,7 @@
     margin: 0px;
 }
 
-.landingPlayWithFriendBox{
+.landingPlayWithFriendBox {
     background-color: white;
     border-radius: 15px;
     display: flex;
@@ -69,7 +70,7 @@
     margin: 4.635% 40% 0% 39.796%;
 }
 
-.landFriendText{
+.landFriendText {
     font-family: TitilliumWeb-Bold;
     font-size: 50px;
     text-align: center;
@@ -77,7 +78,7 @@
     margin: 0px;
 }
 
-.landingAiBox{
+.landingAiBox {
     background-color: white;
     border-radius: 15px;
     display: flex;
@@ -85,7 +86,7 @@
     margin: 1.354% 40% 0% 39.796%;
 }
 
-.landAIText{
+.landAIText {
     font-family: TitilliumWeb-Bold;
     font-size: 50px;
     text-align: center;
@@ -93,7 +94,7 @@
     margin: 0px;
 }
 
-.difficultyBackBox{
+.difficultyBackBox {
     background-color: white;
     border-radius: 15px;
     display: flex;
@@ -103,17 +104,17 @@
     margin-right: 822px;
 }
 
-.difficultyBackText{
+.difficultyBackText {
     font-family: TitilliumWeb-Bold;
     font-size: 50px;
     padding: 10px 53px;
     margin: 0px;
 }
 
-.rulesBtn{
+.rulesBtn {
     font-family: TitilliumWeb-Bold;
     font-size: 50px;
-    background-color: white; 
+    background-color: white;
     color: black;
     border: none;
     border-radius: 15px;
@@ -122,7 +123,7 @@
     padding: 10px 44px 10px 45px;
 }
 
-.difficultyTitleText{
+.difficultyTitleText {
     font-family: TitilliumWeb-Bold;
     font-size: 100px;
     text-align: center;
@@ -130,9 +131,9 @@
     margin: 0px;
 }
 
-.difficultyTitleBox{
-    background-color: white;
-    border-radius: 15px;
+.difficultyTitleBox {
+    /* background-color: white;
+    border-radius: 15px; */
     display: flex;
     justify-content: start;
     margin-top: 19px;
@@ -146,20 +147,21 @@
     border-color: #FFFFFF;
 }
 
-.difficultyMarginTop{
+.difficultyMarginTop {
     margin-top: 170px;
 }
 
-.endTitleBox{
-    background-color: white;
-    border-radius: 15px;
+.endTitleBox {
+    /* background-color: white;
+    border-radius: 15px; */
     display: flex;
     justify-content: start;
     margin-top: 105px;
     margin-left: 637px;
     margin-right: 637px;
 }
-.endTitleText{
+
+.endTitleText {
     font-family: TitilliumWeb-Bold;
     font-size: 100px;
     text-align: center;
@@ -167,9 +169,9 @@
     margin: 0px;
 }
 
-.endUserBox{
-    background-color: white;
-    border-radius: 15px;
+.endUserBox {
+    /* background-color: white;
+    border-radius: 15px; */
     display: flex;
     justify-content: start;
     margin-top: 92px;
@@ -177,7 +179,7 @@
     margin-right: 781px;
 }
 
-.endUserText{
+.endUserText {
     font-family: TitilliumWeb-Bold;
     font-size: 50px;
     text-align: center;
@@ -185,15 +187,15 @@
     margin: 0px;
 }
 
-.endMainBtn{
-    border: none; 
-    background-color: white; 
+.endMainBtn {
+    border: none;
+    background-color: white;
     border-radius: 15px;
     padding: 20px 53px 20px 52px;
     margin-top: 102px;
 }
 
-.gameUserBox{
+.gameUserBox {
     background-color: white;
     border-radius: 15px;
     margin-top: 65px;
@@ -201,7 +203,7 @@
     margin-right: 255.89px;
 }
 
-.gameUserBox2{
+.gameUserBox2 {
     background-color: white;
     border-radius: 15px;
     margin-top: 65px;
@@ -209,11 +211,50 @@
     margin-left: 255.89px;
 }
 
-.gameText{
+.gameText {
     font-size: 50px;
     font-family: TitilliumWeb-Bold;
     text-align: center;
     display: flex;
     justify-content: center;
+    margin: 0px;
+}
+
+.gameInstuctionsText {
+    font-size: 50px;
+    font-family: TitilliumWeb-Bold;
+    margin-top: 50px;
+    margin-left: 65px;
+    margin-bottom: 0px;
+}
+
+.gameScoreText {
+    font-size: 50px;
+    font-family: TitilliumWeb-Bold;
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+    margin-right: 65px;
+    margin-bottom: 0px;
+}
+
+.gameItemText {
+    font-size: 50px;
+    font-family: TitilliumWeb-Bold;
+    margin-top: 15px;
+}
+
+.gameCatchBtn {
+    border: none;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 48px;
+}
+
+.gameCatchBtnText {
+    font-family: TitilliumWeb-Bold;
+    font-size: 50px;
+    padding: 15px 132px 15px 132px;
+    text-align: center;
     margin: 0px;
 }
