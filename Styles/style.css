@@ -258,3 +258,7 @@
     text-align: center;
     margin: 0px;
 }
+
+.selected {
+    border: 10px solid #000000; /* Change the border style for highlighting */
+}
