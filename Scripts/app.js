@@ -389,12 +389,3 @@ async function WinnerOfAI() {
         whoWon.innerHTML = "CPU Won!"
     }
 };
-
-
-// buttons.forEach(button => {
-//     button.addEventListener('click', function () {
-//         buttons.forEach(btn => btn.classList.remove('selected'));
-
-//         this.classList.add('selected');
-//     });
-// });
