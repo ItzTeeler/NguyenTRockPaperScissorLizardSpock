@@ -24,5 +24,17 @@ For the CPU calls I used an API:
 
 At the end, user will be prompted with scores and who won.
 
-Peer Reviewer - 
-Peer Review -
+Peer Reviewer - Kyle Yok Eyh Ma
+Peer Review - 
+- Menu button could use a hover effect to let the user know that the button is clickable. 
+- Vs CPU: 
+    -Dont know what choice the CPU chose. 
+    -Between rounds its hard to know what to click and when. 
+    -Choice does not reset between rounds. If I choose 'rock' and spam click 'Catch' the game ends.
+
+-Play with friend:
+    - Game can be played if Player 2 press catch without choosing an input. 
+    - Catch can be pressed by player 1 without choosing a option first. The HTML element tells me its a tie but should say that no choice has been picked.
+
+- Best out of 7 should be First to 4 Points. 
+- Could add steps on how to play in Rules, escpecially for Playing against CPU since its a little less intuitive.  
