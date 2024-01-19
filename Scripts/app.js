@@ -237,18 +237,16 @@ spock.addEventListener("click", function () {
 });
 
 catchHand.addEventListener("click", function () {
-    if (playerOneTurn){
-        if(option1){
-           RunGame();
-        }else{
-            alert("Choose an option")
+    if (playerOneTurn) {
+        if (option1) {
+            RunGame();
+        } else {
+            gameInstruction.innerText = "Please Pick an Option";
         }
-        
-    }else{
-        alert("Pick an option");
+
+    } else {
+        gameInstruction.innerText = "Please Pick an Option";
     }
-        
-    
 });
 async function APICall() {
     const promise = await fetch(`https://scottsrpsls.azurewebsites.net/api/RockPaperScissors/GetRandomOption`);
