@@ -72,7 +72,6 @@ oneVOne.addEventListener("click", function (e) {
     background.className = "backgroundImgDifficulty";
     landingHeadId.className = "d-none";
     secondPage.className = "";
-    console.log(gameMode);
 });
 
 backBtn.addEventListener("click", function () {
@@ -91,7 +90,6 @@ oneVAI.addEventListener("click", function (e) {
     playerone.innerText = "Player 1: 0";
     playertwo.innerText = "CPU : 0";
     gameInstruction.innerText = "Pick your move!";
-    console.log(gameMode);
 });
 
 suddenDeath.addEventListener("click", function (gamemode) {
@@ -99,7 +97,6 @@ suddenDeath.addEventListener("click", function (gamemode) {
     secondPage.className = "d-none";
     background.className = "backgroundImgGame";
     thirdPage.className = "";
-    console.log(gameMode);
     gameInstruction.innerHTML = "Player 1 Make your MOVE!";
     gameWinner.innerHTML = "";
     playerWho.innerHTML = "Player 1";
@@ -110,7 +107,6 @@ bestOfFive.addEventListener("click", function (gamemode) {
     secondPage.className = "d-none";
     background.className = "backgroundImgGame";
     thirdPage.className = "";
-    console.log(gameMode);
     gameInstruction.innerHTML = "Player 1 Make your MOVE!";
     gameWinner.innerHTML = "";
     playerWho.innerHTML = "Player 1";
@@ -121,7 +117,6 @@ bestOfSeven.addEventListener("click", function (gamemode) {
     secondPage.className = "d-none";
     background.className = "backgroundImgGame";
     thirdPage.className = "";
-    console.log(gameMode);
     gameInstruction.innerHTML = "Player 1 Make your MOVE!";
     gameWinner.innerHTML = "";
     playerWho.innerHTML = "Player 1";
@@ -236,7 +231,6 @@ catchHand.addEventListener("click", function () {
 async function APICall() {
     const promise = await fetch(`https://scottsrpsls.azurewebsites.net/api/RockPaperScissors/GetRandomOption`);
     const data = await promise.text();
-    console.log(data);
     cpuAnswer = data.toLowerCase();
 
 };
@@ -307,9 +301,6 @@ function WinnerOfOnevOne(playerOneInput, playerTwoInput) {
         roundCounter++;
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "Player 2: " + cpuScore;
-        console.log(playerOneInput);
-        console.log(playerTwoInput)
-        console.log(playerTwoInput);
     } else if ((playerOneInput === 'rock' && (playerTwoInput === "scissors" || playerTwoInput === "lizard")) || (playerOneInput == "paper" && (playerTwoInput === "rock" || playerTwoInput === "spock")) || (playerOneInput === "scissors" && (playerTwoInput === "lizard" || playerTwoInput === "paper")) || (playerOneInput === "lizard" && (playerTwoInput === "paper" || playerTwoInput === "spock")) || (playerOneInput === "spock" && (playerTwoInput === "rock" || playerTwoInput === "scissors"))) {
         maxRound++;
         playerOneScore++;
@@ -317,8 +308,6 @@ function WinnerOfOnevOne(playerOneInput, playerTwoInput) {
         gameWinner.innerText = "Player 1 WON!";
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "Player 2: " + cpuScore;
-        console.log(playerOneInput);
-        console.log(playerTwoInput);
 
     } else {
         maxRound++;
@@ -327,8 +316,6 @@ function WinnerOfOnevOne(playerOneInput, playerTwoInput) {
         gameWinner.innerText = "Player 2 WON!";
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "Player 2: " + cpuScore;
-        console.log(playerOneInput);
-        console.log(playerTwoInput);
     }
 
     if (playerOneScore === winnerNumber) {
@@ -357,8 +344,6 @@ async function WinnerOfAI() {
         roundCounter++;
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "CPU: " + cpuScore;
-        console.log(playerOneInput);
-        console.log(cpuAnswer);
     } else if ((playerOneInput === 'rock' && (cpuAnswer === "scissors" || cpuAnswer === "lizard")) || (playerOneInput == "paper" && (cpuAnswer === "rock" || cpuAnswer === "spock")) || (playerOneInput === "scissors" && (cpuAnswer === "lizard" || cpuAnswer === "paper")) || (playerOneInput === "lizard" && (cpuAnswer === "paper" || cpuAnswer === "spock")) || (playerOneInput === "spock" && (cpuAnswer === "rock" || cpuAnswer === "scissors"))) {
         maxRound++;
         playerOneScore++;
@@ -366,8 +351,6 @@ async function WinnerOfAI() {
         gameWinner.innerText = "Player 1 WON!";
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "CPU: " + cpuScore;
-        console.log(playerOneInput);
-        console.log(cpuAnswer);
 
     } else {
         maxRound++;
@@ -376,8 +359,6 @@ async function WinnerOfAI() {
         gameWinner.innerText = "CPU WON!";
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "CPU: " + cpuScore;
-        console.log(playerOneInput);
-        console.log(cpuAnswer);
     }
 
     if (playerOneScore === winnerNumber) {
