@@ -38,3 +38,15 @@ Peer Review -
 
 - Best out of 7 should be First to 4 Points. 
 - Could add steps on how to play in Rules, escpecially for Playing against CPU since its a little less intuitive.  
+
+Edits - 
+Added CPU choice
+For CPU you have to chose another button, unless you want the first thing selected to be played each time pressing catch.
+
+Play with a friend
+Fixed play with friend to make them input an option
+If player 1 presses Catch without an option. It will just draw
+
+Fixed best out of 7 to be first to 4 points
+
+
