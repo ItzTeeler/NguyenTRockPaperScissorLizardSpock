@@ -258,7 +258,7 @@
 }
 
 .selected {
-    border: 3px solid #000000 !important;
+    border: 10px solid #000000 !important;
 }
 
 .boxShadow :hover {

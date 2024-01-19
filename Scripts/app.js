@@ -25,6 +25,7 @@ let gameInstruction = document.getElementById("gameInstruction");
 let whoWon = document.getElementById("whoWon");
 let playerone = document.getElementById("playerone");
 let playertwo = document.getElementById("playertwo");
+let cpuChose = document.getElementById("cpuChose");
 
 let backToMain = document.getElementById("backToMain");
 // 1v1 - 1
@@ -64,6 +65,7 @@ backToMain.addEventListener("click", function () {
     background.className = "backgroundImgLanding";
     fourthPage.className = "d-none";
     landingHeadId.className = "";
+    cpuChose.innerText = "";
     buttons.forEach(btn => btn.classList.remove('selected'));
 });
 
@@ -127,6 +129,7 @@ rock.addEventListener("click", function () {
         buttons.forEach(btn => btn.classList.remove('selected'));
         this.classList.add('selected');
         playerOneInput = "rock";
+        option1 = true;
     } else {
         if (playerOneTurn) {
             playerOneInput = "rock";
@@ -138,6 +141,7 @@ rock.addEventListener("click", function () {
             playerOneTurn = true;
             gameInstruction.innerHTML = "Catch Your OPPONENT!";
             playerWho.innerHTML = "Player 1";
+            option1 = true;
         }
     }
 
@@ -148,6 +152,7 @@ paper.addEventListener("click", function () {
         buttons.forEach(btn => btn.classList.remove('selected'));
         this.classList.add('selected');
         playerOneInput = "paper";
+        option1 = true;
     } else {
         if (playerOneTurn) {
             playerOneInput = "paper";
@@ -159,6 +164,7 @@ paper.addEventListener("click", function () {
             playerOneTurn = true;
             gameInstruction.innerHTML = "Catch Your OPPONENT";
             playerWho.innerHTML = "Player 1";
+            option1 = true;
         }
     }
 });
@@ -168,6 +174,7 @@ scissor.addEventListener("click", function () {
         buttons.forEach(btn => btn.classList.remove('selected'));
         this.classList.add('selected');
         playerOneInput = "scissors";
+        option1 = true;
     } else {
         if (playerOneTurn) {
             playerOneInput = "scissors";
@@ -179,15 +186,18 @@ scissor.addEventListener("click", function () {
             playerOneTurn = true;
             gameInstruction.innerHTML = "Catch Your OPPONENT";
             playerWho.innerHTML = "Player 1";
+            option1 = true;
         }
     }
 });
-
+let option1 = false;
 lizard.addEventListener("click", function () {
     if (gameMode === 2) {
-        buttons.forEach(btn => btn.classList.remove('selected'));
+            buttons.forEach(btn => btn.classList.remove('selected'));
         this.classList.add('selected');
         playerOneInput = "lizard";
+            option1 = true;
+        
     } else {
         if (playerOneTurn) {
             playerOneInput = "lizard";
@@ -199,6 +209,7 @@ lizard.addEventListener("click", function () {
             playerOneTurn = true;
             gameInstruction.innerHTML = "Catch Your OPPONENT";
             playerWho.innerHTML = "Player 1";
+            option1 = true;
         }
     }
 });
@@ -208,6 +219,7 @@ spock.addEventListener("click", function () {
         buttons.forEach(btn => btn.classList.remove('selected'));
         this.classList.add('selected');
         playerOneInput = "spock";
+        option1 = true;
     } else {
         if (playerOneTurn) {
             playerOneInput = "spock";
@@ -219,13 +231,23 @@ spock.addEventListener("click", function () {
             playerOneTurn = true;
             gameInstruction.innerHTML = "Catch Your OPPONENT";
             playerWho.innerHTML = "Player 1";
-            playerWho.innerHTML = "Player 1";
+            option1 = true;
         }
     }
 });
 
 catchHand.addEventListener("click", function () {
-        RunGame();
+    if (playerOneTurn){
+        if(option1){
+           RunGame();
+        }else{
+            alert("Choose an option")
+        }
+        
+    }else{
+        alert("Pick an option");
+    }
+        
     
 });
 async function APICall() {
@@ -263,7 +285,7 @@ function OnevsAI() {
     } else {
         // BEST OF 7
         maxRound = 7;
-        winnerNumber = 5;
+        winnerNumber = 4;
         APICall();
         WinnerOfAI();
     }
@@ -288,7 +310,7 @@ function OnevsOne() {
     } else {
         // BEST OF 7
         maxRound = 7;
-        winnerNumber = 5;
+        winnerNumber = 4;
         WinnerOfOnevOne(playerOneInput, playerTwoInput);
         playerOneInput = "";
         playerTwoInput = "";
@@ -344,11 +366,13 @@ async function WinnerOfAI() {
         roundCounter++;
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "CPU: " + cpuScore;
+        cpuChose.innerText = "CPU chose " + cpuAnswer;
     } else if ((playerOneInput === 'rock' && (cpuAnswer === "scissors" || cpuAnswer === "lizard")) || (playerOneInput == "paper" && (cpuAnswer === "rock" || cpuAnswer === "spock")) || (playerOneInput === "scissors" && (cpuAnswer === "lizard" || cpuAnswer === "paper")) || (playerOneInput === "lizard" && (cpuAnswer === "paper" || cpuAnswer === "spock")) || (playerOneInput === "spock" && (cpuAnswer === "rock" || cpuAnswer === "scissors"))) {
         maxRound++;
         playerOneScore++;
         roundCounter++;
         gameWinner.innerText = "Player 1 WON!";
+        cpuChose.innerText = "CPU chose " + cpuAnswer;
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "CPU: " + cpuScore;
 
@@ -357,6 +381,7 @@ async function WinnerOfAI() {
         cpuScore++;
         roundCounter++;
         gameWinner.innerText = "CPU WON!";
+        cpuChose.innerText = "CPU chose " + cpuAnswer;
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "CPU: " + cpuScore;
     }
