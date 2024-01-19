@@ -3,7 +3,7 @@ let oneVOne = document.getElementById("oneVOne");
 let oneVAI = document.getElementById("oneVAI");
 let suddenDeath = document.getElementById("suddenDeath");
 let playerWho = document.getElementById("playerWho");
-
+let gameWinner = document.getElementById("gameWinner");
 let background = document.getElementById("background");
 let landingHeadId = document.getElementById("landingHeadId");
 let secondPage = document.getElementById("secondPage");
@@ -19,6 +19,7 @@ let scissor = document.getElementById("scissor");
 let lizard = document.getElementById("lizard");
 let spock = document.getElementById("spock");
 let catchHand = document.getElementById("catchHand");
+let whatWasScore = document.getElementById("whatWasScore");
 
 let gameInstruction = document.getElementById("gameInstruction");
 let whoWon = document.getElementById("whoWon");
@@ -34,7 +35,6 @@ let gameMode = 0;
 // 2 - best of 5
 // 3 - best of 7
 let gameType = 0;
-
 
 let roundCounter = 0;
 let maxRound = 0;
@@ -101,6 +101,8 @@ suddenDeath.addEventListener("click", function (gamemode) {
     thirdPage.className = "";
     console.log(gameMode);
     gameInstruction.innerHTML = "Player 1 Make your MOVE!";
+    gameWinner.innerHTML = "";
+    playerWho.innerHTML = "Player 1";
 });
 
 bestOfFive.addEventListener("click", function (gamemode) {
@@ -110,6 +112,8 @@ bestOfFive.addEventListener("click", function (gamemode) {
     thirdPage.className = "";
     console.log(gameMode);
     gameInstruction.innerHTML = "Player 1 Make your MOVE!";
+    gameWinner.innerHTML = "";
+    playerWho.innerHTML = "Player 1";
 });
 
 bestOfSeven.addEventListener("click", function (gamemode) {
@@ -119,6 +123,8 @@ bestOfSeven.addEventListener("click", function (gamemode) {
     thirdPage.className = "";
     console.log(gameMode);
     gameInstruction.innerHTML = "Player 1 Make your MOVE!";
+    gameWinner.innerHTML = "";
+    playerWho.innerHTML = "Player 1";
 });
 
 rock.addEventListener("click", function () {
@@ -227,8 +233,6 @@ catchHand.addEventListener("click", function () {
         RunGame();
     
 });
-
-
 async function APICall() {
     const promise = await fetch(`https://scottsrpsls.azurewebsites.net/api/RockPaperScissors/GetRandomOption`);
     const data = await promise.text();
@@ -299,7 +303,7 @@ function OnevsOne() {
 function WinnerOfOnevOne(playerOneInput, playerTwoInput) {
     if (playerOneInput === playerTwoInput) {
         maxRound++;
-        gameInstruction.innerText = "THIS GAME IS A DRAW";
+        gameWinner.innerText = "THIS GAME IS A DRAW";
         roundCounter++;
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "Player 2: " + cpuScore;
@@ -310,7 +314,7 @@ function WinnerOfOnevOne(playerOneInput, playerTwoInput) {
         maxRound++;
         playerOneScore++;
         roundCounter++;
-        gameInstruction.innerText = "Player 1 WON!";
+        gameWinner.innerText = "Player 1 WON!";
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "Player 2: " + cpuScore;
         console.log(playerOneInput);
@@ -320,7 +324,7 @@ function WinnerOfOnevOne(playerOneInput, playerTwoInput) {
         maxRound++;
         cpuScore++;
         roundCounter++;
-        gameInstruction.innerText = "Player 2 WON!";
+        gameWinner.innerText = "Player 2 WON!";
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "Player 2: " + cpuScore;
         console.log(playerOneInput);
@@ -332,13 +336,14 @@ function WinnerOfOnevOne(playerOneInput, playerTwoInput) {
         thirdPage.className = "d-none"
         background.className = "backgroundImgEnd";
         whoWon.innerHTML = "Player 1 Won!"
-
+        whatWasScore.innerHTML = "Player 1: " + playerOneScore + " Player 2: " + cpuScore;
 
     } else if (cpuScore === winnerNumber) {
         fourthPage.className = "";
         thirdPage.className = "d-none"
         background.className = "backgroundImgEnd";
         whoWon.innerHTML = "Player 2 Won!"
+        whatWasScore.innerHTML = "Player 1: " + playerOneScore + " Player 2: " + cpuScore;
     }
 }
 
@@ -348,7 +353,7 @@ async function WinnerOfAI() {
     await APICall();
     if (playerOneInput === cpuAnswer) {
         maxRound++;
-        gameInstruction.innerText = "THIS GAME IS A DRAW";
+        gameWinner.innerText = "THIS GAME IS A DRAW";
         roundCounter++;
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "CPU: " + cpuScore;
@@ -358,7 +363,7 @@ async function WinnerOfAI() {
         maxRound++;
         playerOneScore++;
         roundCounter++;
-        gameInstruction.innerText = "Player 1 WON!";
+        gameWinner.innerText = "Player 1 WON!";
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "CPU: " + cpuScore;
         console.log(playerOneInput);
@@ -368,7 +373,7 @@ async function WinnerOfAI() {
         maxRound++;
         cpuScore++;
         roundCounter++;
-        gameInstruction.innerText = "CPU WON!";
+        gameWinner.innerText = "CPU WON!";
         playerone.innerHTML = "Player 1: " + playerOneScore;
         playertwo.innerHTML = "CPU: " + cpuScore;
         console.log(playerOneInput);
@@ -380,12 +385,13 @@ async function WinnerOfAI() {
         thirdPage.className = "d-none"
         background.className = "backgroundImgEnd";
         whoWon.innerHTML = "Player 1 Won!"
-
+        whatWasScore.innerHTML = "Player 1: " + playerOneScore + " CPU: " + cpuScore;
 
     } else if (cpuScore === winnerNumber) {
         fourthPage.className = "";
         thirdPage.className = "d-none"
         background.className = "backgroundImgEnd";
         whoWon.innerHTML = "CPU Won!"
+        whatWasScore.innerHTML = "Player 1: " + playerOneScore + " CPU: " + cpuScore;
     }
 };

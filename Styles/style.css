@@ -183,8 +183,8 @@
     font-family: TitilliumWeb-Bold;
     font-size: 50px;
     text-align: center;
-    padding: 0px 29px;
-    margin: 0px;
+    padding: 0px 0px;
+    margin: 10px;
 }
 
 .endMainBtn {
@@ -260,5 +260,14 @@
 }
 
 .selected {
-    border: 10px solid #000000; /* Change the border style for highlighting */
+    border: 3px solid #000000 !important;
+}
+
+.boxShadow :hover {
+    box-shadow: 0 0 50px black;
+}
+
+.rulesText{
+    font-size: 30px;
+    font-family: TitilliumWeb-Regular;
 }

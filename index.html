@@ -69,11 +69,11 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>ROCK beats Scissor & Lizard</p>
-                                    <p>SCISSOR beats Paper & Lizard</p>
-                                    <p>PAPER beats Rock & Spock</p>
-                                    <p>SPOCK beats Rock & Scissor</p>
-                                    <p>LIZARD beats Spock & Paper</p>
+                                    <p class="rulesText">ROCK beats Scissor & Lizard</p>
+                                    <p class="rulesText">SCISSOR beats Paper & Lizard</p>
+                                    <p class="rulesText">PAPER beats Rock & Spock</p>
+                                    <p class="rulesText">SPOCK beats Rock & Scissor</p>
+                                    <p class="rulesText">LIZARD beats Spock & Paper</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -131,6 +131,7 @@
 
                     </div>
                     <p class="gameInstuctionsText" id="gameInstruction" style="margin-top: 50px;">[Instructions]</p>
+                    <p class="gameInstuctionsText" id="gameWinner" style="margin-top: 50px;">[Winner]</p>
                 </div>
                 <div class="col p-0">
                     <img style="max-width: 100%; max-height: 100%;"
@@ -150,40 +151,40 @@
         </div>
         <div class="d-flex justify-content-evenly">
             <div>
-                <button class="p-0" id="rock"
-                    style="height: 150px; width: 150px; border-radius: 150px;  margin-top: 76px; background-color: rgba(0,0,0,.3);">
+                <button class="p-0 boxShadow" id="rock"
+                    style="height: 150px; width: 150px; border-radius: 150px; border-style: none;  margin-top: 76px; background-color: rgba(0,0,0,.3);">
                     <img src="../assets/RockGeodude.png"
                         style="opacity: 100%; height: 150px; width: 150px; border-radius: 150px; border: none;" alt="">
                 </button>
                 <p class="text-center gameItemText">Rock</p>
             </div>
             <div>
-                <button class="p-0" id="paper"
-                    style="height: 150px; width: 150px; border-radius: 150px;  margin-top: 76px; background-color: rgba(0,0,0,.3);">
+                <button class="p-0 boxShadow" id="paper"
+                    style="height: 150px; width: 150px; border-radius: 150px; border-style: none;  margin-top: 76px; background-color: rgba(0,0,0,.3);">
                     <img src="../assets/PaperKartana.png"
                         style="opacity: 100%; height: 150px; width: 150px; border-radius: 150px; border: none;" alt="">
                 </button>
                 <p class="text-center gameItemText">Paper</p>
             </div>
             <div>
-                <button class="p-0" id="scissor"
-                    style="height: 150px; width: 150px; border-radius: 150px;  margin-top: 76px; background-color: rgba(0,0,0,.3);">
+                <button class="p-0 boxShadow" id="scissor"
+                    style="height: 150px; width: 150px; border-radius: 150px; border-style: none;  margin-top: 76px; background-color: rgba(0,0,0,.3);">
                     <img src="../assets/ScissorsScyther.webp"
                         style="opacity: 100%; height: 150px; width: 150px; border-radius: 150px; border: none;" alt="">
                 </button>
                 <p class="text-center gameItemText">Scissor</p>
             </div>
             <div>
-                <button class="p-0" id="lizard"
-                    style="height: 150px; width: 150px; border-radius: 150px; margin-top: 76px; background-color: rgba(0,0,0,.3);">
+                <button class="p-0 boxShadow" id="lizard"
+                    style="height: 150px; width: 150px; border-radius: 150px; border-style: none; margin-top: 76px; background-color: rgba(0,0,0,.3);">
                     <img src="../assets/LizardCyclizar.webp"
                         style="opacity: 100%; height: 150px; width: 150px; border-radius: 150px; border: none;" alt="">
                 </button>
                 <p class="text-center gameItemText">Lizard</p>
             </div>
             <div>
-                <button class="p-0" id="spock"
-                    style="height: 150px; width: 150px; border-radius: 150px;  margin-top: 76px; background-color: rgba(0,0,0,.3);">
+                <button class="p-0 boxShadow" id="spock"
+                    style="height: 150px; width: 150px; border-radius: 150px; border-style: none;  margin-top: 76px; background-color: rgba(0,0,0,.3);">
                     <img src="../assets/Ash.webp"
                         style="opacity: 100%; height: 150px; width: 150px; border-radius: 150px; border: none;" alt="">
                 </button>
@@ -210,6 +211,7 @@
             <div class="endUserBox">
               <div class="container-fluid p-0">
                 <p id="whoWon" class="endUserText">[User Won]</p>
+                <p id="whatWasScore" class="endUserText">[Score]</p>
               </div>
             </div>
             <div class="container-fluid d-flex justify-content-center">
